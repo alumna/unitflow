@@ -19,17 +19,31 @@
 		"url": "https://github.com/alumna/unitflow/issues"
 	},
 	"homepage": "https://github.com/alumna/unitflow#readme",
+	"jest": {
+		"coverageDirectory": "./coverage/",
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"**/src/**",
+			"!**/dist/**",
+			"!**/rollup/**",
+			"!**/node_modules/**"
+		],
+		"verbose": true,
+		"testEnvironment": "node"
+	},
 	"babel": {
 		"env": {
 			"test": {
-				"plugins": ["@babel/plugin-transform-modules-commonjs"]
+				"plugins": [
+					"@babel/plugin-transform-modules-commonjs"
+				]
 			}
 		}
 	},
 	"devDependencies": {
-		"@babel/plugin-transform-modules-commonjs": "^7.6.0",
-		"jest": "^24.9.0",
-		"rollup": "^1.21.4",
-		"rollup-plugin-terser": "^5.1.2"
+		"@babel/plugin-transform-modules-commonjs": "^7.8.3",
+		"jest": "^25.1.0",
+		"rollup": "^1.32.0",
+		"rollup-plugin-terser": "^5.2.0"
 	}
 }
