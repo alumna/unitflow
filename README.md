@@ -49,7 +49,7 @@ UnitFlow is a response to this problem. It gives a tangible approach to organize
 ## Extra beneficts
 
 * Flow's execution is completely asynchronous and non-blocking
-* Each flow returns a promise that resolves after all its units have completed their work
+* Each flow's run returns a promise that resolves after all its units have completed
 * Units that depend on other units for its execution remain non-active and do not consume memory or processing
 * Units that create or call flows can use a third argument `flows` that points to the UnitFlow instance in use
 
