@@ -1,6 +1,6 @@
 {
 	"name": "unitflow",
-	"version": "1.0.0",
+	"version": "0.9.0",
 	"description": "Organize your library or project, defining flows composable by a sequence of units",
 	"main": "dist/unitflow.cjs.js",
 	"module": "dist/unitflow.es.js",
