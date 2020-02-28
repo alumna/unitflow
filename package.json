@@ -25,8 +25,8 @@
 		"collectCoverageFrom": [
 			"**/src/**",
 			"!**/dist/**",
-			"!**/rollup/**"
-			"!**/node_modules/**",
+			"!**/rollup/**",
+			"!**/node_modules/**"
 		],
 		"verbose": true,
 		"testEnvironment": "node"
