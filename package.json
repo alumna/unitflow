@@ -1,0 +1,35 @@
+{
+	"name": "unitflow",
+	"version": "1.0.0",
+	"description": "Organize your library or project, defining flows composable by a sequence of units",
+	"main": "dist/unitflow.cjs.js",
+	"module": "dist/unitflow.es.js",
+	"scripts": {
+		"build": "rollup --config rollup/cjs.js && rollup --config rollup/es.js",
+		"prepare": "npm run build",
+		"test": "jest --coverage"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alumna/unitflow.git"
+	},
+	"author": "Paulo Coghi",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/alumna/unitflow/issues"
+	},
+	"homepage": "https://github.com/alumna/unitflow#readme",
+	"babel": {
+		"env": {
+			"test": {
+				"plugins": ["@babel/plugin-transform-modules-commonjs"]
+			}
+		}
+	},
+	"devDependencies": {
+		"@babel/plugin-transform-modules-commonjs": "^7.6.0",
+		"jest": "^24.9.0",
+		"rollup": "^1.21.4",
+		"rollup-plugin-terser": "^5.1.2"
+	}
+}

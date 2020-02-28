@@ -1,0 +1,1 @@
+export default class{constructor(t={}){this.unit={},this.flow={},this.state=t}link(t,s){const n={},e=t.length,i=this.state;for(let o=e-1;o>=0;o--){const l=this.unit[t[o]],r=o==e-1?s:n[o+1],h=async()=>l(i,r);n[o]=h}n[0]()}async run(...t){t.reverse();const s=[];for(let n=t.length-1;n>=0;n--){const e=new Promise(s=>this.link(this.flow[t[n]],s));s.push(e)}return Promise.all(s)}}
