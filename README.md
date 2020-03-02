@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://github.com/alumna/unitflow/raw/master/unitflow.svg?sanitize=true" alt="unitflow" width="480" height="270" />
+	<img src="https://github.com/alumna/unitflow/raw/master/unitflow.svg?sanitize=true" alt="unitflow" width="640" height="360" />
 </div>
 
 <div align="center">
@@ -41,8 +41,9 @@ UnitFlow is a response to this problem. It gives a tangible approach to organize
 * Each unit is always called with two arguments: `state` and `next`
 * `state` is a writable object available to all units and can *(optionally)* be initialized with upfront data
 * `next` is the function to be called *(without arguments)* inside the unit when its work is done
-* A unit can also create new flows or call existing ones, allowing the organization of really complex scenarios
-* Each unit can specify execution dependencies on other units 
+* A unit can create new flows or call existing ones, allowing the organization of really complex scenarios
+* Units that create or call flows can retrieve their instance with the keyword `this` to do so
+* Each unit can specify execution dependencies on other units
 * Units with dependencies will be called only after their dependencies have completed
 * You can run **multiple flows** in parallel and define dependencies between **different units on different flows**
 
@@ -51,7 +52,6 @@ UnitFlow is a response to this problem. It gives a tangible approach to organize
 * Flow's execution is completely asynchronous and non-blocking
 * Each flow's run returns a promise that resolves after all its units have completed
 * Units that depend on other units for its execution remain non-active and do not consume memory or processing
-* Units that create or call flows can use a third argument `flows` that points to the UnitFlow instance in use
 
 
 ## Install
@@ -85,6 +85,12 @@ mylib.flow[ 'flow_1' ] = [ 'unit_1', 'unit_2' ]
 mylib.run( 'flow_1' )
 
 ```
+
+## Special third argument `end`
+
+In any unit you can optionally end a flow using the third argument. This way the flow will not continue
+
+
 
 ## Usage: multiple flows
 
