@@ -88,7 +88,31 @@ mylib.run( 'flow_1' )
 
 ## Special third argument `end`
 
-In any unit you can optionally end a flow using the third argument. This way the flow will not continue
+In any unit you can optionally end a flow using the third argument `end`. When calling it, flow will not continue:
+
+```js
+import Unitflow from '@alumna/unitflow';
+
+// create an instance
+const mylib = new Unitflow();
+
+// defining units
+mylib.unit[ 'unit_1' ] = function ( state, next, end ) {
+	
+	// If true, the flow will stop and unit_2 will not be called
+	if ( something_bad_happens == true )
+		return end();
+}
+
+mylib.unit[ 'unit_2' ] = function ( state, next ) { /* ... */ }
+
+// defining a flow
+mylib.flow[ 'flow_1' ] = [ 'unit_1', 'unit_2' ]
+
+// running a single flow
+mylib.run( 'flow_1' )
+
+```
 
 
 
