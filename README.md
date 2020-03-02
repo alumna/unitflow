@@ -24,13 +24,20 @@
 
 <br/>
 
-## Now you can easily orgnize your complex library in Javascript
+## Introducing Unitflow
 
-UnitFlow can be used on any type of project, but it is mainly aimed to be used when building libraries.
+**Easily orgnize complex libraries in Javascript**
+
+UnitFlow can be used on any type of project, but it is aimed to be used when building libraries.
 
 It's common to find yourself racking your brain to translate into code a complex sequence of different activities. Also, it is even more difficult to maintain and grow a code like that.
 
 UnitFlow is a response to this problem. It gives a tangible approach to organize all the workflow of your library or project by making the sequence of activities more visual on your code.
+
+## Key Features
+
+* Extremely lightweight with **no dependencies** – 1.3kB!
+* Fully asynchronous, non-blocking and reactive
 
 ## How UnitFlow works
 
@@ -49,9 +56,8 @@ UnitFlow is a response to this problem. It gives a tangible approach to organize
 
 ## Extra beneficts
 
-* Flow's execution is completely asynchronous and non-blocking
 * Each flow's run returns a promise that resolves after all its units have completed
-* Units that depend on other units for its execution remain non-active and do not consume memory or processing
+* Units waiting its dependencies remain non-active and **do not consume memory or processing**
 
 
 ## Install
