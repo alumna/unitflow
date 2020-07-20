@@ -1,4 +1,4 @@
-class Unitflow {
+export class Unitflow {
 
 	constructor ( state = {} ) {
 
@@ -134,5 +134,3 @@ class Unitflow {
 	}
 
 }
-
-export default Unitflow;

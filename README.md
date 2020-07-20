@@ -75,7 +75,7 @@ Additionally, this module is delivered as:
 ## Usage: single flow
 
 ```js
-import Unitflow from '@alumna/unitflow';
+import { Unitflow } from '@alumna/unitflow';
 
 // create an instance
 const mylib = new Unitflow({ /* optional data for initial state */ });
@@ -97,7 +97,7 @@ mylib.run( 'flow_1' )
 In any unit you can optionally end a flow using the third argument `end`. When calling it, flow will not continue:
 
 ```js
-import Unitflow from '@alumna/unitflow';
+import { Unitflow } from '@alumna/unitflow';
 
 // create an instance
 const mylib = new Unitflow();
@@ -125,7 +125,7 @@ mylib.run( 'flow_1' )
 ## Usage: multiple flows
 
 ```js
-import Unitflow from '@alumna/unitflow';
+import { Unitflow } from '@alumna/unitflow';
 
 // create an instance
 const mylib = new Unitflow({ /* optional data for initial state */ });

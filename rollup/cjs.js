@@ -8,5 +8,5 @@ export default {
 		format: 'cjs'
 	},
 
-	// plugins: [ terser() ]
+	plugins: [ terser() ]
 };
