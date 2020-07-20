@@ -41,9 +41,9 @@
 		}
 	},
 	"devDependencies": {
-		"@babel/plugin-transform-modules-commonjs": "^7.8.3",
-		"jest": "^25.1.0",
-		"rollup": "^1.32.0",
-		"rollup-plugin-terser": "^5.2.0"
+		"@babel/plugin-transform-modules-commonjs": "^7.10.4",
+		"jest": "^26.1.0",
+		"rollup": "^2.22.1",
+		"rollup-plugin-terser": "^6.1.0"
 	}
 }
