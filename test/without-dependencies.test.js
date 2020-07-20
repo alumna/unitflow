@@ -1,4 +1,4 @@
-import Unitflow from './../src/unitflow';
+import { Unitflow } from './../src/unitflow';
 
 
 describe( 'Flows without dependencies', () => {
