@@ -1,5 +1,10 @@
 # Unitflow changelog
 
+## 1.0.1 - 2020-07-20
+
+* Named export
+* Updated dev-dependencies
+
 ## 1.0.0 - 2020-03-02
 
 * Dependency feature released!
