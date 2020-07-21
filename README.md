@@ -12,8 +12,8 @@
 	<a href="https://travis-ci.org/alumna/unitflow">
 		<img src="https://travis-ci.org/alumna/unitflow.svg?branch=master" alt="travis" />
 	</a>
-	<a href="https://codecov.io/gh/alumna/unitflow">
-		<img src="https://codecov.io/gh/alumna/unitflow/branch/master/graph/badge.svg" />
+	<a href='https://coveralls.io/github/alumna/unitflow?branch=master'>
+		<img src='https://coveralls.io/repos/github/alumna/unitflow/badge.svg?branch=master' alt='Coverage Status' />
 	</a>
 	<a href="https://npmjs.org/package/@alumna/unitflow">
 		<img src="https://badgen.now.sh/npm/dm/@alumna/unitflow" alt="downloads" />
