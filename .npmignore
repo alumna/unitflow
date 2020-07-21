@@ -3,3 +3,5 @@ rollup/
 src/
 test/
 unitflow.svg
+.travis.yml
+codecov.yml
