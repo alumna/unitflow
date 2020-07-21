@@ -10,3 +10,5 @@ node_js:
   - "node"
 after_script:
   - codecov
+notifications:
+  webhooks: https://coveralls.io/webhook
