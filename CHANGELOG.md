@@ -1,5 +1,11 @@
 # Unitflow changelog
 
+## 1.0.2 - 2024-01-19
+
+* Updated how ESM and CommonJS versions are distributed
+* Moved to Github actions
+* Updated dev-dependencies
+
 ## 1.0.1 - 2020-07-20
 
 * Named export
