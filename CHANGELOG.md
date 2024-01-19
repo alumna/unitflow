@@ -1,5 +1,9 @@
 # Unitflow changelog
 
+## 1.0.3 - 2024-01-19
+
+* Gracefully stop a flow when at least one unit inside it isn't a function, informing on console
+
 ## 1.0.2 - 2024-01-19
 
 * Updated how ESM and CommonJS versions are distributed

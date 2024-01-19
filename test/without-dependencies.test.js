@@ -1,4 +1,5 @@
 import { Unitflow } from './../src/unitflow';
+import { jest } 	from '@jest/globals';
 
 
 describe( 'Flows without dependencies', () => {
@@ -70,6 +71,35 @@ describe( 'Flows without dependencies', () => {
 			'task 3': 'done',
 			'task 4': 'done'
 		});
+
+	});
+
+	test('3. Error when an unit isn\'t a function', async () => {
+
+		// console.log mock
+		let log_message;
+		const log = jest.spyOn(console, "log").mockImplementation( message => log_message = message );
+
+		const lib = new Unitflow();
+		
+		expect( lib.state ).toEqual( {} );
+
+		lib.unit[ 'task 1' ] = function ( state, next ) {
+			state[ 'task 1' ] = 'done'
+			next();
+		}
+
+		lib.unit[ 'task 2' ] = 'This string is not a function';
+
+		lib.flow[ 'tasks' ] = [ 'task 1', 'task 2' ]
+
+		await lib.run( 'tasks' )
+
+		expect( lib.state ).toEqual({});
+		expect( log_message ).toBe( 'Error: Unit "task 2" on flow "tasks" is not a function. This flow execution is stopped.' )
+
+		// undo console.log mock
+		log.mockReset();
 
 	});
 
