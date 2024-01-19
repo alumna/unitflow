@@ -66,6 +66,10 @@ export class Unitflow {
 
 		for ( let i = length - 1; i >= 0; i-- ) {
 			
+			// ensure it's a function
+			if ( typeof this.unit[ units[i] ] !== 'function' )
+				return console.log( `Error: Unit "${units[i]}" on flow "${flow}" is not a function. This flow execution is stopped.` ) && resolve();
+
 			const 	unit = this.unit[ units[i] ].bind( this ),
 					next = i == ( length - 1 ) ? resolve : sequence[ i + 1 ],
 					name = flow + ':' + units[i],

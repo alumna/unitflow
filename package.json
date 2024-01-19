@@ -1,6 +1,6 @@
 {
 	"name": "@alumna/unitflow",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Organize your library or project, defining flows composable by a sequence of units",
 	"exports": {
 		"import": "./dist/unitflow.mjs",
