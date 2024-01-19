@@ -65,8 +65,8 @@ $ npm install @alumna/unitflow
 
 Additionally, this module is delivered as:
 
-* **ES Module**: [`dist/unitflow.es.js`](https://unpkg.com/@alumna/unitflow/dist/unitflow.es.js)
-* **CommonJS**: [`dist/unitflow.cjs.js`](https://unpkg.com/@alumna/unitflow/dist/unitflow.cjs.js)
+* **ES Module**: [`dist/unitflow.mjs`](https://unpkg.com/@alumna/unitflow/dist/unitflow.mjs)
+* **CommonJS**: [`dist/unitflow.cjs`](https://unpkg.com/@alumna/unitflow/dist/unitflow.cjs)
 
 
 ## Usage: single flow
