@@ -3,7 +3,7 @@ import { Unitflow } from './../src/unitflow';
 
 describe( 'Flows without dependencies', () => {
 
-	test('1. One flow and two units', async ( done ) => {
+	test('1. One flow and two units', async () => {
 
 		const lib = new Unitflow();
 		
@@ -28,11 +28,9 @@ describe( 'Flows without dependencies', () => {
 			'task 2': 'done'
 		});
 
-		done();
-
 	});
 
-	test('2. Two flows and two units each', async ( done ) => {
+	test('2. Two flows and two units each', async () => {
 
 		const lib = new Unitflow();
 		
@@ -72,8 +70,6 @@ describe( 'Flows without dependencies', () => {
 			'task 3': 'done',
 			'task 4': 'done'
 		});
-
-		done();
 
 	});
 

@@ -1,13 +1,19 @@
 {
 	"name": "@alumna/unitflow",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Organize your library or project, defining flows composable by a sequence of units",
-	"main": "dist/unitflow.cjs.js",
-	"module": "dist/unitflow.es.js",
+	"exports": {
+		"import": "./dist/unitflow.mjs",
+		"require": "./dist/unitflow.cjs",
+		"default": "./dist/unitflow.mjs"
+	},
+	"main": "dist/unitflow.cjs",
+	"module": "dist/unitflow.mjs",
+	"type": "module",
 	"scripts": {
 		"build": "rollup --config rollup/cjs.js && rollup --config rollup/es.js",
-		"prepare": "npm run build",
-		"test": "jest --coverage"
+		"prepare": "rollup --config rollup/cjs.js && rollup --config rollup/es.js",
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
 	},
 	"repository": {
 		"type": "git",
@@ -29,21 +35,12 @@
 			"!**/node_modules/**"
 		],
 		"verbose": true,
-		"testEnvironment": "node"
-	},
-	"babel": {
-		"env": {
-			"test": {
-				"plugins": [
-					"@babel/plugin-transform-modules-commonjs"
-				]
-			}
-		}
+		"testEnvironment": "node",
+		"transform": {}
 	},
 	"devDependencies": {
-		"@babel/plugin-transform-modules-commonjs": "^7.10.4",
-		"jest": "^26.1.0",
-		"rollup": "^2.22.1",
-		"rollup-plugin-terser": "^6.1.0"
+		"jest": "^29.7.0",
+		"rollup": "^4.9.5",
+		"@rollup/plugin-terser": "^0.4.4"
 	}
 }
